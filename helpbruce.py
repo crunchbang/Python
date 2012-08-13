@@ -1,3 +1,11 @@
+# helpbruce.py
+# A generalized solution to the 'Simon says' problem presented to 
+# Bruce Willis in Die Hard.
+
+# Any number that can be formed by a combination of
+# numbers a and b must be a multiple of gcd(a, b)
+
+# gcd : A simple function to calculate the gcd of two numbers
 def gcd (a, b):
 	while a > 0 and b > 0:
 		if a > b:
@@ -6,10 +14,14 @@ def gcd (a, b):
 			b = b % a
 	return a if a else b
 
+# Jugs : A class to represent buckets used in the program along with 
+#        some useful methods.
 class Jugs:
 	def __init__ (self, cap):
 		self.qty = 0
 		self.cap = cap
+	def quantity (self):
+		return self.quantity
 	def fill (self):
 		self.qty = self.cap
 	def full (self):
@@ -17,13 +29,13 @@ class Jugs:
 			return True
 		else:
 			return False
+	def drain (self):
+		self.qty = 0
 	def empty (self):
 		if self.qty == 0:
 			return True
 		else:
 			return False
-	def drain (self):
-		self.qty = 0
 	def transfer (self, inp):
 		rmn = self.cap - self.qty
 		if inp > rmn:
@@ -34,9 +46,10 @@ class Jugs:
 			return 0
 		
 def printJugs (jug1, jug2):
-	print "(" + str(jug1.qty) + ", " + str(jug2.qty) + ")"
+	print "(" + str(jug1.quantity()) + ", " + str(jug2.quantity()) + ")"
 
-def checkfillJugs (jug1, jug2):
+#check_transferJugs : The method used to transfer items between jug1 and jug2
+def check_transferJugs (jug1, jug2):
 	jug1.qty = jug2.transfer(jug1.qty)
 	if jug2.full():
 		jug2.drain()
@@ -55,7 +68,7 @@ if __name__ == "__main__":
 		if jug1.empty():
 			jug1.fill()
 			printJugs(jug1, jug2)
-		checkfillJugs(jug1, jug2)
+		check_transferJugs(jug1, jug2)
 		printJugs(jug1, jug2)
 
 
