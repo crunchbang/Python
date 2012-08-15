@@ -16,10 +16,12 @@ def gcd (a, b):
 
 # Jugs : A class to represent buckets used in the program along with 
 #        some useful methods.
-class Jugs:
+class Jug:
 	def __init__ (self, cap):
 		self.qty = 0
 		self.cap = cap
+	def __repr__ (self):
+		return str(self.qty)
 	def quantity (self):
 		return self.quantity
 	def fill (self):
@@ -46,7 +48,7 @@ class Jugs:
 			return 0
 		
 def printJugs (jug1, jug2):
-	print "(" + str(jug1.quantity()) + ", " + str(jug2.quantity()) + ")"
+	print "(%s, %s)" % (jug1, jug2)
 
 #check_transferJugs : The method used to transfer items between jug1 and jug2
 def check_transferJugs (jug1, jug2):
@@ -62,8 +64,8 @@ if __name__ == "__main__":
 	if cpcty > max(qty1, qty2) or cpcty % gcd(qty1, qty2) != 0:
 		print "Not possible!!"
 		exit(0)
-	jug1 = Jugs(min(qty1, qty2))
-	jug2 = Jugs(max(qty1, qty2))
+	jug1 = Jug(min(qty1, qty2))
+	jug2 = Jug(max(qty1, qty2))
 	while jug2.qty != cpcty:
 		if jug1.empty():
 			jug1.fill()
