@@ -72,10 +72,3 @@ if __name__ == "__main__":
 			printJugs(jug1, jug2)
 		check_transferJugs(jug1, jug2)
 		printJugs(jug1, jug2)
-
-
-
-
-		
-
-
