@@ -100,7 +100,7 @@ def create_population(size, result):
 	return pop
 
 if __name__ == "__main__":
-	global_opt = Chromosome('Hello, World!', 0) # The target chromosome
+	global_opt = Chromosome("Hello, World!", 0) # The target chromosome
 	crossover_chance = 0.7
 	mutation_chance = 0.4
 	pop_size = 20
