@@ -1,0 +1,56 @@
+g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.README
+graphcode.py          wallpaper_changer.py
+Graph.py
+➜  python git:(master) ✗ ls
+b2.py                 graph.pyc
+backup.py             graph_tc.py
+caesar_cipher.py      graph_tc.pyc
+fcm                   GraphWorld.py
+flaskr                helpbruce.py
+g2.py                 qs.py
+genetic_algorithm.py  README
+graphcode.py          wallpaper_changer.py
+Graph.py
+➜  python git:(master) ✗ vim pc2.py
+➜  python git:(master) ✗ python2 pc2.py 
+
+
+
+
+Traceback (most recent call last):
+  File "pc2.py", line 4, in <module>
+    result.append(chr(ord(char + 2) % 26))
+NameError: name 'result' is not defined
+➜  python git:(master) ✗ fcm                   GraphWorld.py
+zsh: command not found: fcm
+➜  python git:(master) ✗ flaskr                helpbruce.py
+zsh: command not found: flaskr
+➜  python git:(master) ✗ g2.py                 qs.py
+zsh: command not found: g2.py
+➜  python git:(master) ✗ genetic_algorithm.py  README
+zsh: command not found: genetic_algorithm.py
+➜  python git:(master) ✗ graphcode.py          wallpaper_changer.py
+zsh: command not found: graphcode.py
+➜  python git:(master) ✗ Graph.py
+zsh: command not found: Graph.py
+➜  python git:(master) ✗        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

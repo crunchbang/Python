@@ -120,17 +120,21 @@ if __name__ == "__main__":
 		rand_cand = random.choice(range(pop_size))
 		genepool[rand_cand] = mutate(genepool[rand_cand], 
 				mutation_chance, global_opt) # Randomly select individual for mutation
-		parent1, parent2 = random.sample(genepool, 2)    # Randomly select parents from genepool
+		#parent1, parent2 = random.sample(genepool, 2)    # Randomly select parents from genepool
+		parent1, parent2 = genepool[0], genepool[1]
 		child1, child2 = crossover(parent1, parent2, crossover_chance, global_opt)
 		if isvalid(child1) and isvalid(child2):
 			genepool.append(child1)
 			genepool.append(child2)
 		generation += 1
 		genepool = sorted(genepool, key = lambda x: x.cost) # Sort genepool according to cost;From least to greatest
+#		time.sleep(.2)
 	print 'At generation:', generation, ': ', genepool[0]
 	print 'Probability of mutation:', mutation_chance
 	print 'Probability of crossover:', crossover_chance
 
+	raw_input()
+	# Plotting #
 	plt.plot(gener,scores)
 	plt.ylabel("Avg cost per generation")
 	plt.xlabel("Generation")
